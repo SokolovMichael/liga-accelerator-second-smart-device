@@ -1,0 +1,27 @@
+.chapter {
+  color: $light-color-type-5;
+}
+
+.chapter h2 {
+  margin: 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+}
+
+.chapter__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 90px;
+}
+
+.chapter__item-link {
+  display: block;
+  text-decoration: none;
+  color: $light-color-type-3;
+}

@@ -1,0 +1,17 @@
+.feedback {
+  background: $background-color;
+  background-image: url("../img/svg/polygon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 170px 0 250px;
+}
+
+.feedback__wrapper {
+  width: 1220px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 510px 1fr;
+  gap: 120px;
+  align-items: center;
+}

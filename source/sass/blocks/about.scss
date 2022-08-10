@@ -1,0 +1,40 @@
+.about {
+  width: 1220px;
+  margin: 0 auto 100px;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 100px;
+}
+
+.about__wrapper h2 {
+  margin: 0 0 15px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+}
+
+.about__list {
+  list-style-type: none;
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.about__item p {
+  margin: 0 0 15px;
+}
+
+.about__button {
+  cursor: pointer;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  background: transparent;
+  border-radius: 3px;
+  color: $base-button-color;
+  text-transform: uppercase;
+  border: 1px solid $base-button-color;
+  padding: 14px 12px;
+  width: 180px;
+}

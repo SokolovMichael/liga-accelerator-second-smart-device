@@ -1,0 +1,30 @@
+.contacts {
+  width: 480px;
+}
+
+.contacts__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 18px;
+  font-style: normal;
+}
+
+.contacts__details {
+  color: $light-color-type-2;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  padding: 10px 10px 10px 30px;
+  box-sizing: border-box;
+}
+
+.contacts__icon {
+  position: absolute;
+  top: 7px;
+  left: 0;
+}

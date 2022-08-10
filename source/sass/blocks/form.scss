@@ -1,0 +1,82 @@
+.form {
+  color: $light-color-type-5;
+}
+
+.form__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form__fieldset legend {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 51px;
+}
+
+.form__fieldset p {
+  margin: 0 0 35px;
+}
+
+.form__list {
+  list-style-type: none;
+  margin: 0 0 35px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form__item:first-child {
+  margin-right: 10px;
+}
+
+.form__item--question {
+  grid-column: 1 / 3;
+}
+
+.form__item input,
+.form__question {
+  width: 100%;
+  font-size: 16px;
+  line-height: 21px;
+  padding: 15px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 3px;
+  background: $dark-color-type-6;
+  color: $light-color-type-5;
+}
+
+.form__question {
+  padding: 25px 15px;
+  resize: none;
+  min-height: 155px;
+}
+
+.form__item input::placeholder,
+.form__question::placeholder {
+  color: $light-color-type-5;
+}
+
+.form__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.form__wrapper button {
+  background: $dark-color-type-7;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+  color: $light-color-type-5;
+  padding: 15px 25px;
+  box-sizing: border-box;
+}

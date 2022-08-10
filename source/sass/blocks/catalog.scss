@@ -1,0 +1,27 @@
+.catalog {
+  background: $base-dark-color;
+  padding: 70px 0 140px;
+}
+
+.catalog__wrapper {
+  width: 1220px;
+  margin: 0 auto;
+}
+
+.catalog__wrapper h2 {
+  color: $light-color-type-5;
+  margin: 0 0 50px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+}
+
+.catalog__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 85px;
+}

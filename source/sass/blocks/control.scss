@@ -1,0 +1,38 @@
+.control {
+  position: relative;
+  cursor: pointer;
+  padding-left: 23px;
+}
+
+.control__mark-icon {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 9px;
+  height: 6px;
+  content: "";
+  z-index: 2;
+  fill: $base-light-color;
+  fill: transparent;
+}
+
+.control__mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  border: 1px solid $light-color-type-5;
+  content: "";
+}
+
+.control span:last-child {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.control input[type="checkbox"]:checked + .control__mark-icon {
+  display: block;
+}

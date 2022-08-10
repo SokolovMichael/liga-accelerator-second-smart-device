@@ -1,13 +1,17 @@
 .chapter {
   color: $light-color-type-5;
+  width: 500px;
+  margin-top: 7px;
 }
 
 .chapter h2 {
-  margin: 0;
+  margin: 0 0 18px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
 }
 
 .chapter__list {
@@ -17,11 +21,20 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 90px;
+  letter-spacing: 0.2px;
+  height: 145px;
+}
+
+.chapter__item {
+  margin-right: 30px;
+  display: block;
 }
 
 .chapter__item-link {
   display: block;
   text-decoration: none;
   color: $light-color-type-3;
+  padding: 5px 0 4px;
+  box-sizing: border-box;
+  width: 220px;
 }

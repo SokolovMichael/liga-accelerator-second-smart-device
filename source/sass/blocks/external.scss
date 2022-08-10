@@ -1,8 +1,13 @@
 .external {
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 0 35px 0 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 140px;
+}
+
+.external__link {
+  display: block;
 }

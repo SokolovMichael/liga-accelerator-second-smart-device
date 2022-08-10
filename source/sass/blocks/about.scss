@@ -7,7 +7,7 @@
 }
 
 .about__wrapper h2 {
-  margin: 0 0 15px;
+  margin: 0 0 13px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
   font-size: 36px;
@@ -16,12 +16,20 @@
 
 .about__list {
   list-style-type: none;
-  margin: 0 0 20px;
+  margin: 0 0 43px;
   padding: 0;
 }
 
+.about__item--hidden {
+  display: none;
+}
+
+.about__item--nojs {
+  display: block;
+}
+
 .about__item p {
-  margin: 0 0 15px;
+  margin: 0 0 22px;
 }
 
 .about__button {
@@ -35,6 +43,12 @@
   color: $base-button-color;
   text-transform: uppercase;
   border: 1px solid $base-button-color;
-  padding: 14px 12px;
+  padding: 14px 12px 12px;
   width: 180px;
+  letter-spacing: 0.7px;
+  display: block;
+}
+
+.about__button--nojs {
+  display: none;
 }

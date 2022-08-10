@@ -8,7 +8,7 @@
   justify-content: space-between;
   align-items: center;
   margin-right: 60px;
-  min-height: 120px;
+  min-height: 110px;
 }
 
 .nav__link {
@@ -31,14 +31,16 @@
 
 .nav__link span {
   display: block;
+  margin-top: 2px;
 }
 
-.nav__link-description {
+.nav__link .nav__link-description {
   color: $light-color-type-3;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 12px;
   line-height: 14px;
   font-weight: 500;
+  margin: 0;
 }
 
 .nav__button {
@@ -51,6 +53,7 @@
   font-size: 14px;
   line-height: 17px;
   font-weight: 700;
-  padding: 10px 15px;
+  padding: 10px 17px 11px;
   cursor: pointer;
+  letter-spacing: 0.6px;
 }

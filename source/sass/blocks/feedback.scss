@@ -2,9 +2,9 @@
   background: $background-color;
   background-image: url("../img/svg/polygon.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: -555px;
   background-size: cover;
-  padding: 170px 0 250px;
+  padding: 165px 0 250px;
 }
 
 .feedback__wrapper {
@@ -14,4 +14,8 @@
   grid-template-columns: 510px 1fr;
   gap: 120px;
   align-items: center;
+}
+
+.feedback__wrapper img {
+  margin-top: 22px;
 }

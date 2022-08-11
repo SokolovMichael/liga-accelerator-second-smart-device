@@ -10,12 +10,27 @@
   @media (min-resolution: 2dppx) {
     background-image: url("../img/background/intro/back@2x.jpg");
   }
+
+  @media (max-width: $max-tablet-width) {
+    background-image: url("../img/background/intro/back-tablet.jpg");
+    margin-bottom: 80px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/intro/back-tablet@2x.jpg");
+    }
+  }
 }
 
 .intro__wrapper {
-  min-height: 760px;
+  min-height: 880px;
   padding-top: 120px;
   position: relative;
+  box-sizing: border-box;
+
+  @media (max-width: $max-tablet-width) {
+    min-height: 640px;
+    padding-top: 90px;
+  }
 }
 
 .intro__wrapper::after {
@@ -35,6 +50,19 @@
   z-index: 1;
   margin: 184px auto 50px;
   width: 970px;
+
+  @media (max-width: $desktop-stretching-width) {
+    width: calc(970 / 1280 * 100vw);
+  }
+
+  @media (max-width: $max-tablet-width) {
+    width: 670px;
+    margin-top: 89px;
+  }
+
+  @media (max-width: $max-tablet-width-control-point) {
+    width: calc(670 / 770 * 100vw);
+  }
 }
 
 .intro__description h1 {
@@ -44,6 +72,13 @@
   line-height: 94px;
   text-transform: uppercase;
   letter-spacing: 5.7px;
+
+  @media (max-width: $max-tablet-width) {
+    font-size: 64px;
+    line-height: 75px;
+    letter-spacing: 4.7px;
+    margin-bottom: 1px;
+  }
 }
 
 .intro__description p {
@@ -51,6 +86,10 @@
   font-size: 22px;
   line-height: 34px;
   width: 685px;
+
+  @media (max-width: $max-tablet-width) {
+    margin-bottom: 57px;
+  }
 }
 
 .intro__link {
@@ -67,4 +106,8 @@
   border-radius: 3px;
   width: 410px;
   letter-spacing: 1px;
+
+  @media (max-width: $max-tablet-width) {
+    margin-left: 45px;
+  }
 }

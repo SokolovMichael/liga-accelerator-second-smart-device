@@ -1,6 +1,19 @@
 .benefits {
   width: 1222px;
   margin: 0 auto 120px;
+
+  @media (max-width: $desktop-stretching-width) {
+    width: calc(1222 / 1280 * 100vw);
+  }
+
+  @media (max-width: $max-tablet-width) {
+    width: 670px;
+    margin-bottom: 75px;
+  }
+
+  @media (max-width: $max-tablet-width-control-point) {
+    width: calc(670 / 770 * 100vw);
+  }
 }
 
 .benefits__list {
@@ -19,6 +32,11 @@
   padding: 94px 45px 45px 42px;
   box-sizing: border-box;
   min-height: 300px;
+
+  @media (max-width: $max-tablet-width) {
+    min-height: 360px;
+    padding: 92px 41px 31px 41px;
+  }
 }
 
 .benefits__icon {
@@ -35,10 +53,19 @@
   line-height: 34px;
   font-weight: 400;
   color: $base-button-color;
+
+  @media (max-width: $max-tablet-width) {
+    margin-bottom: 11px;
+    line-height: 29px;
+  }
 }
 
 .benefits__item p {
   margin: 0;
+
+  @media (max-width: $max-tablet-width) {
+    line-height: 21.5px;
+  }
 }
 
 .benefits__item:hover {

@@ -1,5 +1,14 @@
 .contacts {
   width: 480px;
+
+  @media (max-width: $desktop-stretching-width) {
+    width: calc(480 / 1280 * 100vw);
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: $max-tablet-width) {
+    width: auto;
+  }
 }
 
 .contacts__list {
@@ -21,10 +30,29 @@
   display: block;
   padding: 10px 10px 10px 40px;
   box-sizing: border-box;
+
+  @media (max-width: $max-tablet-width) {
+    padding: 20px;
+    margin-right: 20px;
+  }
 }
 
 .contacts__icon {
   position: absolute;
   top: 8px;
   left: 6px;
+
+  @media (max-width: $max-tablet-width) {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+}
+
+.contacts__details span {
+  @media (max-width: $max-tablet-width) {
+    display: none;
+  }
 }

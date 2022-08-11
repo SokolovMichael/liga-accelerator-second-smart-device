@@ -5,6 +5,15 @@
   background-position: -555px;
   background-size: cover;
   padding: 165px 0 250px;
+
+  @media (max-width: $desktop-stretching-width) {
+    background-position: calc(-555 / 1280 * 100vw) -100px;
+  }
+
+  @media (max-width: $max-tablet-width) {
+    background-image: none;
+    padding: 45px 0 125px;
+  }
 }
 
 .feedback__wrapper {
@@ -14,8 +23,27 @@
   grid-template-columns: 510px 1fr;
   gap: 120px;
   align-items: center;
+
+  @media (max-width: $desktop-stretching-width) {
+    width: calc(1220 / 1280 * 100vw);
+    gap: calc(120 / 1280 * 100vw);
+    grid-template-columns: calc(510 / 1280 * 100vw) 1fr;
+  }
+
+  @media (max-width: $max-tablet-width) {
+    display: block;
+    width: 670px;
+  }
+
+  @media (max-width: $max-tablet-width-control-point) {
+    width: calc(670 / 770 * 100vw);
+  }
 }
 
 .feedback__wrapper img {
   margin-top: 22px;
+
+  @media (max-width: $max-tablet-width) {
+    display: none;
+  }
 }

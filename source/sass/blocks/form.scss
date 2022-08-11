@@ -1,6 +1,10 @@
 .form {
   color: $light-color-type-5;
   margin-right: 10px;
+
+  @media (max-width: $max-tablet-width) {
+    margin-right: 0;
+  }
 }
 
 .form__fieldset {
@@ -16,10 +20,19 @@
   margin-bottom: 12px;
   position: relative;
   left: -5px;
+
+  @media (max-width: $max-tablet-width) {
+    left: 0;
+    margin-bottom: 8px;
+  }
 }
 
 .form__fieldset p {
   margin: 0 0 35px;
+
+  @media (max-width: $max-tablet-width) {
+    margin-bottom: 25px;
+  }
 }
 
 .form__list {
@@ -52,6 +65,10 @@
   padding: 25px 15px;
   resize: none;
   min-height: 155px;
+
+  @media (max-width: $max-tablet-width) {
+    padding: 30px 15px;
+  }
 }
 
 .form__item input::placeholder,
@@ -64,6 +81,15 @@
   grid-template-columns: 1fr 1fr;
   gap: 50px;
   align-items: center;
+
+  @media (max-width: $desktop-stretching-width) {
+    gap: calc(50 / 1280 * 100vw);
+  }
+
+  @media (max-width: $max-tablet-width) {
+    grid-template-columns: 265px 1fr;
+    gap: 85px;
+  }
 }
 
 .form__wrapper button {

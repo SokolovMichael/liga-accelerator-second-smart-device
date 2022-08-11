@@ -38,7 +38,9 @@ const onModalWindowOutsideClickClose = (evt) => {
 };
 
 const openModal = () => {
-  openModalWindowButton.addEventListener('click', onModalWindowOpen);
+  if (getComputedStyle(openModalWindowButton).display !== 'none') {
+    openModalWindowButton.addEventListener('click', onModalWindowOpen);
+  }
 };
 
 export {openModal};

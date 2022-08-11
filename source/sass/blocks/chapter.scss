@@ -2,6 +2,14 @@
   color: $light-color-type-5;
   width: 500px;
   margin-top: 7px;
+
+  @media (max-width: $desktop-stretching-width) {
+    width: calc(500 / 1280 * 100vw);
+  }
+
+  @media (max-width: $max-tablet-width) {
+    margin-top: 0;
+  }
 }
 
 .chapter h2 {
@@ -23,11 +31,19 @@
   flex-wrap: wrap;
   letter-spacing: 0.2px;
   height: 145px;
+
+  @media (max-width: $max-tablet-width) {
+    height: auto;
+  }
 }
 
 .chapter__item {
   margin-right: 30px;
   display: block;
+
+  @media (max-width: $max-tablet-width) {
+    margin-right: 0;
+  }
 }
 
 .chapter__item-link {
@@ -37,4 +53,12 @@
   padding: 5px 0 4px;
   box-sizing: border-box;
   width: 220px;
+
+  @media (max-width: $desktop-stretching-width) {
+    width: calc(220 / 1280 * 100vw);
+  }
+
+  @media (max-width: $max-tablet-width) {
+    width: 220px;
+  }
 }

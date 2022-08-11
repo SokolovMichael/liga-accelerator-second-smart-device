@@ -35,6 +35,11 @@
   width: 100%;
   z-index: 2;
   background: linear-gradient($base-dark-color 84.9%, $dark-color-type-2 100%);
+
+  @media (max-width: $max-tablet-width) {
+    position: absolute;
+    top: 0;
+  }
 }
 
 .page__main {

@@ -3,6 +3,10 @@
   cursor: pointer;
   padding-left: 26px;
   margin-top: 15px;
+
+  @media (max-width: $max-tablet-width) {
+    margin-top: 6px;
+  }
 }
 
 .control__mark-icon {

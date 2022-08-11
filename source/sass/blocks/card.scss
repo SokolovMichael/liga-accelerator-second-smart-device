@@ -1,15 +1,20 @@
-.card {
-  position: relative;
-  display: block;
-  padding: 47px 0 0 40px;
-  box-sizing: border-box;
-  min-height: 650px;
-}
-
 .card__link {
-  color: $light-color-type-5;
-  text-decoration: none;
   display: block;
+  color: $light-color-type-5;
+  box-sizing: border-box;
+  padding: 47px 0 0 40px;
+  min-height: 650px;
+  position: relative;
+  text-decoration: none;
+
+  @media (max-width: $desktop-stretching-width) {
+    min-height: calc(650 / 1280 * 100vw);
+  }
+
+  @media (max-width: $max-tablet-width) {
+    min-height: 250px;
+    padding: 37px 0 0 45px;
+  }
 }
 
 .card__link h3 {
@@ -20,6 +25,14 @@
   font-size: 20px;
   line-height: 30px;
   font-weight: 400;
+}
+
+.card__link h3 br {
+  display: none;
+
+  @media (max-width: $max-tablet-width) {
+    display: block;
+  }
 }
 
 .card__picture {

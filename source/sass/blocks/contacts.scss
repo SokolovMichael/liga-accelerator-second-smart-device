@@ -37,6 +37,12 @@
   }
 }
 
+.contacts__item:last-child .contacts__details {
+  @media (max-width: $max-mobile-width) {
+    margin-right: 0;
+  }
+}
+
 .contacts__icon {
   position: absolute;
   top: 8px;

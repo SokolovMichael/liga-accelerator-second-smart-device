@@ -49,7 +49,10 @@
             <div class="intro__description">
               <h1>Печатные платы</h1>
               <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-              <a class="intro__link" href="#feedback">Получить бесплатную консультацию</a>
+              <a class="intro__link" href="#feedback">
+                <span>Получить бесплатную консультацию</span>
+                <span>Бесплатная консультация</span>
+              </a>
             </div>
           </div>
         </div>
@@ -63,19 +66,19 @@
               <h3>Оперативные сроки</h3>
               <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки.</p>
             </li>
-            <li class="benefits__item">
+            <li class="benefits__item benefits__item--major-suppliers">
               <svg class="benefits__icon" width="35" height="35">
                 <use xlink:href="img/sprite.svg#icon-hired"></use>
               </svg>
               <h3>Крупные поставщики</h3>
-              <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
+              <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспечивает хорошее качество нашей продукции.</p>
             </li>
             <li class="benefits__item">
               <svg class="benefits__icon" width="35" height="35">
                 <use xlink:href="img/sprite.svg#icon-detective"></use>
               </svg>
               <h3>Полная конфиденциальность</h3>
-              <p>По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
+              <p>По желанию клиента мы обеспечиваем полную конфиденциальность.</p>
             </li>
             <li class="benefits__item">
               <svg class="benefits__icon" width="35" height="35">
@@ -94,8 +97,8 @@
               <li class="about__item">
                 <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
               </li>
-              <li class="about__item">
-                <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
+              <li class="about__item about__item--suppliers about__item--suppliers-nojs">
+                <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.<span> Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
               </li>
               <li class="about__item about__item--hidden about__item--nojs">
                 <p>Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и 20 городов присутствия.</p>
@@ -110,8 +113,9 @@
         <section class="catalog">
           <div class="catalog__wrapper">
             <h2>Smart Device предлагает следующие товары и услуги</h2>
+            <h3>Товары и услуги Smart&nbsp;Device</h3>
             <ul class="catalog__list">
-              <li class="catalog__item card" tabindex="0">
+              <li class="catalog__item card">
                 <a class="card__link" href="#">
                   <div class="card__picture">
                     <picture>
@@ -133,7 +137,7 @@
                   </svg>
                 </a>
               </li>
-              <li class="catalog__item card" tabindex="0">
+              <li class="catalog__item card">
                 <a class="card__link" href="#">
                   <div class="card__picture">
                     <picture>
@@ -156,7 +160,7 @@
                   </svg>
                 </a>
               </li>
-              <li class="catalog__item card" tabindex="0">
+              <li class="catalog__item card">
                 <a class="card__link" href="#">
                   <div class="card__picture">
                     <picture>
@@ -310,9 +314,19 @@
             </ul>
           </div>
           <div class="footer__details">
-            <div class="footer__chapter chapter">
+            <div class="footer__chapter chapter chapter--nojs">
               <h2>Разделы сайта</h2>
-              <ul class="chapter__list">
+              <button class="chapter__button chapter__button--closed" type="button">
+                <svg class="chapter__button-icon chapter__button-icon--open" width="15" height="15">
+                  <use xlink:href="img/sprite.svg#icon-open-menu"></use>
+                </svg>
+                <span class="visually-hidden">Открыть меню</span>
+                <svg class="chapter__button-icon chapter__button-icon--close" width="15" height="15">
+                  <use xlink:href="img/sprite.svg#icon-close-menu"></use>
+                </svg>
+                <span class="visually-hidden">Закрыть меню</span>
+              </button>
+              <ul class="chapter__list chapter__list--closed">
                 <li class="chapter__item">
                   <a class="chapter__item-link" href="#">О Компании</a>
                 </li>
@@ -336,9 +350,19 @@
                 </li>
               </ul>
             </div>
-            <address class="footer__contacts footer-contacts">
+            <address class="footer__contacts footer-contacts footer-contacts--nojs">
               <div>Наш офис</div>
-              <ul class="footer-contacts__list">
+              <button class="footer-contacts__button footer-contacts__button--closed" type="button">
+                <svg class="footer-contacts__button-icon footer-contacts__button-icon--open" width="15" height="15">
+                  <use xlink:href="img/sprite.svg#icon-open-menu"></use>
+                </svg>
+                <span class="visually-hidden">Открыть меню</span>
+                <svg class="footer-contacts__button-icon footer-contacts__button-icon--close" width="15" height="15">
+                  <use xlink:href="img/sprite.svg#icon-close-menu"></use>
+                </svg>
+                <span class="visually-hidden">Закрыть меню</span>
+              </button>
+              <ul class="footer-contacts__list footer-contacts__list--closed">
                 <li class="footer-contacts__item">
                   <a class="footer-contacts__item-link" href="#">г. Мытищи, Олимпийский проспект, д.10</a>
                 </li>

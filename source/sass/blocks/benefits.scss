@@ -14,6 +14,11 @@
   @media (max-width: $max-tablet-width-control-point) {
     width: calc(670 / 770 * 100vw);
   }
+
+  @media (max-width: $max-mobile-width) {
+    width: 270px;
+    margin-bottom: 38px;
+  }
 }
 
 .benefits__list {
@@ -23,6 +28,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+
+  @media (max-width: $max-mobile-width) {
+    display: block;
+  }
 }
 
 .benefits__item {
@@ -37,6 +46,24 @@
     min-height: 360px;
     padding: 92px 41px 31px 41px;
   }
+
+  @media (max-width: $max-mobile-width) {
+    margin-bottom: 30px;
+    min-height: 325px;
+    padding: 75px 30px 75px 25px;
+  }
+}
+
+.benefits__item:last-child {
+  @media (max-width: $max-mobile-width) {
+    margin-bottom: 0;
+  }
+}
+
+.benefits__item--major-suppliers {
+  @media (max-width: $max-mobile-width) {
+    padding-bottom: 55px;
+  }
 }
 
 .benefits__icon {
@@ -44,6 +71,13 @@
   top: 40px;
   left: 40px;
   fill: $base-button-color;
+
+  @media (max-width: $max-mobile-width) {
+    width: 30px;
+    height: 30px;
+    top: 29px;
+    left: 26px;
+  }
 }
 
 .benefits__item h3 {
@@ -58,6 +92,12 @@
     margin-bottom: 11px;
     line-height: 29px;
   }
+
+  @media (max-width: $max-mobile-width) {
+    font-size: 20px;
+    line-height: 29px;
+    margin-bottom: 8px;
+  }
 }
 
 .benefits__item p {
@@ -65,6 +105,11 @@
 
   @media (max-width: $max-tablet-width) {
     line-height: 21.5px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    font-size: 14px;
+    line-height: 19px;
   }
 }
 

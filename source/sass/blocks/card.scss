@@ -15,9 +15,14 @@
     min-height: 250px;
     padding: 37px 0 0 45px;
   }
+
+  @media (max-width: $max-mobile-width) {
+    padding: 23px 0 0 30px;
+  }
 }
 
 .card__link h3 {
+  display: block;
   position: relative;
   width: 180px;
   margin: 0;
@@ -25,6 +30,11 @@
   font-size: 20px;
   line-height: 30px;
   font-weight: 400;
+
+  @media (max-width: $max-mobile-width) {
+    font-size: 18px;
+    line-height: 33px;
+  }
 }
 
 .card__link h3 br {
@@ -67,4 +77,9 @@
   bottom: 0;
   right: 0;
   fill: transparent;
+
+  @media (max-width: $max-mobile-width) {
+    width: 40px;
+    height: 40px;
+  }
 }

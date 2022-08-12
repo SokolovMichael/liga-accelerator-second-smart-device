@@ -7,6 +7,13 @@
   @media (max-width: $max-tablet-width) {
     margin-top: 6px;
   }
+
+  @media (max-width: $max-mobile-width) {
+    padding-left: 30px;
+    display: block;
+    margin: 0 auto;
+    width: 270px;
+  }
 }
 
 .control__mark-icon {
@@ -19,6 +26,11 @@
   content: "";
   z-index: 2;
   fill: transparent;
+
+  @media (max-width: $max-mobile-width) {
+    top: 11px;
+    left: 7px;
+  }
 }
 
 .control__mark {
@@ -30,6 +42,13 @@
   border-radius: 2px;
   border: 1px solid $light-color-type-5;
   content: "";
+
+  @media (max-width: $max-mobile-width) {
+    top: 7px;
+    left: 5px;
+    width: 12px;
+    height: 12px;
+  }
 }
 
 .control span:last-child {

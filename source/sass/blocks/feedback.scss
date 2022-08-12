@@ -14,6 +14,11 @@
     background-image: none;
     padding: 45px 0 125px;
   }
+
+  @media (max-width: $max-mobile-width) {
+    padding: 47px 0 90px;
+    box-sizing: border-box;
+  }
 }
 
 .feedback__wrapper {
@@ -37,6 +42,12 @@
 
   @media (max-width: $max-tablet-width-control-point) {
     width: calc(670 / 770 * 100vw);
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 100%;
+    padding: 0 25px;
+    box-sizing: border-box;
   }
 }
 

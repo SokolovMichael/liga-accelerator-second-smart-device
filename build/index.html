@@ -12,7 +12,7 @@
     <div class="page__wrapper">
       <header class="page__header">
         <nav class="nav">
-          <div class="nav__wrapper">
+          <div class="nav__wrapper nav__wrapper--nojs">
             <a class="nav__link nav__link--active" href="#">
               <svg class="nav__logo" width="55" height="55">
                 <use xlink:href="img/sprite.svg#logo"></use>
@@ -39,7 +39,7 @@
                 </li>
               </ul>
             </address>
-            <button class="nav__button" type="button">Заказать звонок</button>
+            <button type="button">Заказать звонок</button>
           </div>
         </nav>
       </header>
@@ -91,23 +91,23 @@
         </section>
         <section class="about">
           <img src="img/svg/about.svg" loading="lazy" width="150" height="320" alt="О компании.">
-          <div class="about__wrapper">
+          <div class="about__wrapper about__wrapper--nojs">
             <h2>О компании</h2>
             <ul class="about__list">
               <li class="about__item">
                 <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
               </li>
-              <li class="about__item about__item--suppliers about__item--suppliers-nojs">
+              <li class="about__item about__item--suppliers">
                 <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.<span> Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
               </li>
-              <li class="about__item about__item--hidden about__item--nojs">
+              <li class="about__item about__item--hidden">
                 <p>Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и 20 городов присутствия.</p>
               </li>
-              <li class="about__item about__item--hidden about__item--nojs">
+              <li class="about__item about__item--hidden">
                 <p>Мы стремимся к постоянному развитию и повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и время наших клиентов.</p>
               </li>
             </ul>
-            <button class="about__button about__button--nojs" type="button">Подробнее</button>
+            <button type="button">Подробнее</button>
           </div>
         </section>
         <section class="catalog">
@@ -209,7 +209,7 @@
                   <li class="form__item form__item--question">
                     <label class="form__label">
                       <span class="visually-hidden">Сообщение в свободной форме</span>
-                      <textarea class="form__question" name="question" placeholder="Ваш вопрос"></textarea>
+                      <textarea name="question" placeholder="Ваш вопрос"></textarea>
                     </label>
                   </li>
                 </ul>
@@ -228,7 +228,7 @@
             </form>
           </div>
         </section>
-        <section class="modal visually-hidden">
+        <section class="modal modal--closed">
           <div class="modal__wrapper">
             <div class="modal__window">
               <h2>Закажите звонок</h2>
@@ -240,7 +240,7 @@
                     <li class="form-popup__item">
                       <label class="form-popup__label">
                         <span class="visually-hidden">Имя:</span>
-                        <input class="form-popup__input" type="text" name="name" placeholder="Имя" autofocus required>
+                        <input type="text" name="name" placeholder="Имя" autofocus required>
                       </label>
                     </li>
                     <li class="form-popup__item">
@@ -252,7 +252,7 @@
                     <li class="form-popup__item">
                       <label class="form-popup__label">
                         <span class="visually-hidden">Сообщение в свободной форме</span>
-                        <textarea class="form-popup__question" name="question" placeholder="Ваш вопрос"></textarea>
+                        <textarea name="question" placeholder="Ваш вопрос"></textarea>
                       </label>
                     </li>
                   </ul>
@@ -267,7 +267,7 @@
                   </label>
                 </fieldset>
               </form>
-              <button class="modal__button" type="button">
+              <button type="button">
                 <svg class="modal__button-icon" width="20" height="20">
                   <use xlink:href="img/sprite.svg#icon-modal-close"></use>
                 </svg>
@@ -316,7 +316,7 @@
           <div class="footer__details">
             <div class="footer__chapter chapter chapter--nojs">
               <h2>Разделы сайта</h2>
-              <button class="chapter__button chapter__button--closed" type="button">
+              <button type="button">
                 <svg class="chapter__button-icon chapter__button-icon--open" width="15" height="15">
                   <use xlink:href="img/sprite.svg#icon-open-menu"></use>
                 </svg>
@@ -352,7 +352,7 @@
             </div>
             <address class="footer__contacts footer-contacts footer-contacts--nojs">
               <div>Наш офис</div>
-              <button class="footer-contacts__button footer-contacts__button--closed" type="button">
+              <button type="button">
                 <svg class="footer-contacts__button-icon footer-contacts__button-icon--open" width="15" height="15">
                   <use xlink:href="img/sprite.svg#icon-open-menu"></use>
                 </svg>

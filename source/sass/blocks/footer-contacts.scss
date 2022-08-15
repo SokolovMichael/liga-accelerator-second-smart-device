@@ -36,7 +36,7 @@
   }
 }
 
-.footer-contacts__button {
+.footer-contacts button {
   display: none;
 
   @media (max-width: $max-mobile-width) {
@@ -63,10 +63,12 @@
   }
 }
 
-.footer-contacts--nojs .footer-contacts__button,
-.footer-contacts__button--closed .footer-contacts__button-icon--close,
-.footer-contacts__button--opened .footer-contacts__button-icon--open {
-  display: none;
+.footer-contacts--nojs button,
+.footer-contacts--closed .footer-contacts__button-icon--close,
+.footer-contacts--opened .footer-contacts__button-icon--open {
+  @media (max-width: $max-mobile-width) {
+    display: none;
+  }
 }
 
 .footer-contacts__list {

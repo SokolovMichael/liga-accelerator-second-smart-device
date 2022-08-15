@@ -87,7 +87,7 @@
   margin: 0;
 }
 
-.nav__button {
+.nav__wrapper button {
   background: transparent;
   color: $light-color-type-2;
   border: 1px solid $light-color-type-2;
@@ -104,4 +104,8 @@
   @media (max-width: $max-tablet-width) {
     display: none;
   }
+}
+
+.nav__wrapper--nojs button {
+  display: none;
 }

@@ -1,12 +1,13 @@
 import {isEscapeKey} from './utils/is-escape-key.js';
 
-const openModalWindowButton = document.querySelector('.nav__button');
+const nav = document.querySelector('.nav__wrapper');
+const openModalWindowButton = nav.querySelector('button');
 const modal = document.querySelector('.modal');
-const closeModalWindowButton = modal.querySelector('.modal__button');
-const formPopupInput = modal.querySelector('.form-popup__input');
+const closeModalWindowButton = modal.querySelector('button[type="button"]');
+const formPopupInput = modal.querySelector('input[type="text"]');
 
 const onModalWindowOpen = () => {
-  modal.classList.remove('visually-hidden');
+  modal.classList.remove('modal--closed');
   openModalWindowButton.removeEventListener('click', onModalWindowOpen);
   closeModalWindowButton.addEventListener('click', onModalWindowClose);
   document.addEventListener('keydown', onModalWindowEscKeydown);
@@ -15,7 +16,7 @@ const onModalWindowOpen = () => {
 };
 
 const onModalWindowClose = () => {
-  modal.classList.add('visually-hidden');
+  modal.classList.add('modal--closed');
   closeModalWindowButton.removeEventListener('click', onModalWindowClose);
   openModalWindowButton.addEventListener('click', onModalWindowOpen);
   document.removeEventListener('keydown', onModalWindowEscKeydown);
@@ -31,13 +32,15 @@ const onModalWindowEscKeydown = (evt) => {
 
 const onModalWindowOutsideClickClose = (evt) => {
   if (!document.querySelector('.modal__wrapper').contains(evt.target)) {
-    if (evt.target.className !== 'nav__button') {
+    if (evt.target !== openModalWindowButton) {
       onModalWindowClose();
     }
   }
 };
 
 const openModal = () => {
+  nav.classList.remove('nav__wrapper--nojs');
+
   if (getComputedStyle(openModalWindowButton).display !== 'none') {
     openModalWindowButton.addEventListener('click', onModalWindowOpen);
   }

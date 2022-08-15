@@ -535,7 +535,7 @@ img {
   margin: 0;
 }
 
-.nav__button {
+.nav__wrapper button {
   background: transparent;
   color: #f2f5f6;
   border: 1px solid #f2f5f6;
@@ -548,6 +548,10 @@ img {
   padding: 10px 17px 11px;
   cursor: pointer;
   letter-spacing: 0.6px;
+}
+
+.nav__wrapper--nojs button {
+  display: none;
 }
 
 .contacts {
@@ -756,14 +760,6 @@ img {
   padding: 0;
 }
 
-.about__item--hidden {
-  display: none;
-}
-
-.about__item--nojs {
-  display: block;
-}
-
 .about__item {
   margin-bottom: 22px;
 }
@@ -776,11 +772,15 @@ img {
   margin: 0;
 }
 
-.about__item--suppliers p span {
+.about__item--hidden {
+  display: none;
+}
+
+.about__wrapper--nojs .about__item--hidden {
   display: block;
 }
 
-.about__button {
+.about__wrapper button {
   cursor: pointer;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 14px;
@@ -799,7 +799,7 @@ img {
   box-sizing: border-box;
 }
 
-.about__button--nojs {
+.about__wrapper--nojs button {
   display: none;
 }
 
@@ -971,7 +971,7 @@ img {
 }
 
 .form__item input,
-.form__question {
+.form__item textarea {
   width: 100%;
   font-size: 16px;
   line-height: 21px;
@@ -985,34 +985,34 @@ img {
   display: block;
 }
 
-.form__question {
+.form__item textarea {
   padding: 25px 15px;
   resize: none;
   min-height: 155px;
 }
 
 .form__item input::-webkit-input-placeholder,
-.form__question::-webkit-input-placeholder {
+.form__item textarea::-webkit-input-placeholder {
   color: #ffffff;
 }
 
 .form__item input::-moz-placeholder,
-.form__question::-moz-placeholder {
+.form__item textarea::-moz-placeholder {
   color: #ffffff;
 }
 
 .form__item input:-ms-input-placeholder,
-.form__question:-ms-input-placeholder {
+.form__item textarea:-ms-input-placeholder {
   color: #ffffff;
 }
 
 .form__item input::-ms-input-placeholder,
-.form__question::-ms-input-placeholder {
+.form__item textarea::-ms-input-placeholder {
   color: #ffffff;
 }
 
 .form__item input::placeholder,
-.form__question::placeholder {
+.form__item textarea::placeholder {
   color: #ffffff;
 }
 
@@ -1095,6 +1095,10 @@ img {
   color: #ffffff;
 }
 
+.modal--closed {
+  display: none;
+}
+
 .modal__wrapper {
   width: 500px;
   padding: 36px 40px 40px;
@@ -1124,7 +1128,7 @@ img {
   margin: 0 0 40px;
 }
 
-.modal__button {
+.modal__window button[type="button"] {
   width: 70px;
   height: 70px;
   border: none;
@@ -1165,7 +1169,7 @@ img {
 }
 
 .form-popup__item input,
-.form-popup__question {
+.form-popup__item textarea {
   width: 100%;
   font-size: 16px;
   line-height: 21px;
@@ -1178,34 +1182,34 @@ img {
   padding: 14px 16px 15px;
 }
 
-.form-popup__question {
+.form-popup__item textarea {
   padding: 25px 15px;
   resize: none;
   min-height: 155px;
 }
 
 .form-popup__item input::-webkit-input-placeholder,
-.form-popup__question::-webkit-input-placeholder {
+.form-popup__item textarea::-webkit-input-placeholder {
   color: #ffffff;
 }
 
 .form-popup__item input::-moz-placeholder,
-.form-popup__question::-moz-placeholder {
+.form-popup__item textarea::-moz-placeholder {
   color: #ffffff;
 }
 
 .form-popup__item input:-ms-input-placeholder,
-.form-popup__question:-ms-input-placeholder {
+.form-popup__item textarea:-ms-input-placeholder {
   color: #ffffff;
 }
 
 .form-popup__item input::-ms-input-placeholder,
-.form-popup__question::-ms-input-placeholder {
+.form-popup__item textarea::-ms-input-placeholder {
   color: #ffffff;
 }
 
 .form-popup__item input::placeholder,
-.form-popup__question::placeholder {
+.form-popup__item textarea::placeholder {
   color: #ffffff;
 }
 
@@ -1376,13 +1380,7 @@ img {
   letter-spacing: 0.8px;
 }
 
-.chapter__button {
-  display: none;
-}
-
-.chapter--nojs .chapter__button,
-.chapter__button--closed .chapter__button-icon--close,
-.chapter__button--opened .chapter__button-icon--open {
+.chapter button {
   display: none;
 }
 
@@ -1435,13 +1433,7 @@ img {
   letter-spacing: 0.8px;
 }
 
-.footer-contacts__button {
-  display: none;
-}
-
-.footer-contacts--nojs .footer-contacts__button,
-.footer-contacts__button--closed .footer-contacts__button-icon--close,
-.footer-contacts__button--opened .footer-contacts__button-icon--open {
+.footer-contacts button {
   display: none;
 }
 
@@ -1561,7 +1553,7 @@ img {
     margin-right: 0;
   }
 
-  .nav__button {
+  .nav__wrapper button {
     display: none;
   }
 
@@ -1705,7 +1697,7 @@ img {
     margin-bottom: 25px;
   }
 
-  .form__question {
+  .form__item textarea {
     padding: 30px 15px;
   }
 
@@ -1954,7 +1946,7 @@ img {
     margin-bottom: 0;
   }
 
-  .about__item--suppliers-nojs {
+  .about__wrapper--nojs .about__item--suppliers {
     margin-bottom: 18px;
   }
 
@@ -1962,15 +1954,12 @@ img {
     display: none;
   }
 
-  .about__item--suppliers-show p span {
-    display: block;
+  .about__item--suppliers-show p span,
+  .about__wrapper--nojs .about__item--suppliers p span {
+    display: inline;
   }
 
-  .about__item--suppliers-nojs p span {
-    display: block;
-  }
-
-  .about__button {
+  .about__wrapper button {
     width: 160px;
     padding: 8px;
   }
@@ -2051,7 +2040,7 @@ img {
     margin-bottom: 0;
   }
 
-  .form__question {
+  .form__item textarea {
     padding: 22px 15px;
     min-height: 180px;
   }
@@ -2127,7 +2116,7 @@ img {
     border-bottom: 1px solid rgba(248, 253, 255, 0.7);
   }
 
-  .chapter__button {
+  .chapter button {
     display: block;
     position: absolute;
     top: 0;
@@ -2146,6 +2135,12 @@ img {
     bottom: 0;
     left: 0;
     margin: auto;
+  }
+
+  .chapter--nojs button,
+  .chapter--closed .chapter__button-icon--close,
+  .chapter--opened .chapter__button-icon--open {
+    display: none;
   }
 
   .chapter__list {
@@ -2180,7 +2175,7 @@ img {
     margin-bottom: 13px;
   }
 
-  .footer-contacts__button {
+  .footer-contacts button {
     display: block;
     position: absolute;
     top: 0;
@@ -2199,6 +2194,12 @@ img {
     bottom: 0;
     left: 0;
     margin: auto;
+  }
+
+  .footer-contacts--nojs button,
+  .footer-contacts--closed .footer-contacts__button-icon--close,
+  .footer-contacts--opened .footer-contacts__button-icon--open {
+    display: none;
   }
 
   .footer-contacts__list {

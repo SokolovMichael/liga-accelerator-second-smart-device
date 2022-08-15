@@ -9,6 +9,10 @@
   color: $light-color-type-5;
 }
 
+.modal--closed {
+  display: none;
+}
+
 .modal__wrapper {
   width: 500px;
   padding: 36px 40px 40px;
@@ -35,7 +39,7 @@
   margin: 0 0 40px;
 }
 
-.modal__button {
+.modal__window button[type="button"] {
   width: 70px;
   height: 70px;
   border: none;

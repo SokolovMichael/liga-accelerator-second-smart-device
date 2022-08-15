@@ -1,14 +1,14 @@
 const chapter = document.querySelector('.footer__chapter');
-const chapterButton = chapter.querySelector('.chapter__button');
+const chapterButton = chapter.querySelector('button');
 const chapterList = chapter.querySelector('.chapter__list');
 const footerContacts = document.querySelector('.footer__contacts');
-const footerContactsButton = footerContacts.querySelector('.footer-contacts__button');
+const footerContactsButton = footerContacts.querySelector('button');
 const footerContactsList = footerContacts.querySelector('.footer-contacts__list');
 
 
 const onCloseChapterMenu = () => {
-  chapterButton.classList.remove('chapter__button--opened');
-  chapterButton.classList.add('chapter__button--closed');
+  chapter.classList.remove('chapter--opened');
+  chapter.classList.add('chapter--closed');
   chapterList.classList.remove('chapter__list--opened');
   chapterList.classList.add('chapter__list--closed');
   chapterButton.addEventListener('click', onShowChapterMenu);
@@ -16,8 +16,8 @@ const onCloseChapterMenu = () => {
 };
 
 const onShowChapterMenu = () => {
-  chapterButton.classList.remove('chapter__button--closed');
-  chapterButton.classList.add('chapter__button--opened');
+  chapter.classList.remove('chapter--closed');
+  chapter.classList.add('chapter--opened');
   chapterList.classList.remove('chapter__list--closed');
   chapterList.classList.add('chapter__list--opened');
   chapterButton.removeEventListener('click', onShowChapterMenu);
@@ -27,8 +27,8 @@ const onShowChapterMenu = () => {
 
 
 const onCloseFooterContactsMenu = () => {
-  footerContactsButton.classList.remove('footer-contacts__button--opened');
-  footerContactsButton.classList.add('footer-contacts__button--closed');
+  footerContacts.classList.remove('footer-contacts--opened');
+  footerContacts.classList.add('footer-contacts--closed');
   footerContactsList.classList.remove('footer-contacts__list--opened');
   footerContactsList.classList.add('footer-contacts__list--closed');
   footerContactsButton.removeEventListener('click', onCloseFooterContactsMenu);
@@ -36,8 +36,8 @@ const onCloseFooterContactsMenu = () => {
 };
 
 const onShowFooterContactsMenu = () => {
-  footerContactsButton.classList.remove('footer-contacts__button--closed');
-  footerContactsButton.classList.add('footer-contacts__button--opened');
+  footerContacts.classList.remove('footer-contacts--closed');
+  footerContacts.classList.add('footer-contacts--opened');
   footerContactsList.classList.remove('footer-contacts__list--closed');
   footerContactsList.classList.add('footer-contacts__list--opened');
   footerContactsButton.removeEventListener('click', onShowFooterContactsMenu);

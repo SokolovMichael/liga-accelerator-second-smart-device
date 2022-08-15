@@ -30,7 +30,7 @@
   letter-spacing: 0.8px;
 }
 
-.chapter__button {
+.chapter button {
   display: none;
 
   @media (max-width: $max-mobile-width) {
@@ -57,11 +57,12 @@
   }
 }
 
-
-.chapter--nojs .chapter__button,
-.chapter__button--closed .chapter__button-icon--close,
-.chapter__button--opened .chapter__button-icon--open {
-  display: none;
+.chapter--nojs button,
+.chapter--closed .chapter__button-icon--close,
+.chapter--opened .chapter__button-icon--open {
+  @media (max-width: $max-mobile-width) {
+    display: none;
+  }
 }
 
 .chapter__list {

@@ -1,11 +1,11 @@
-const about = document.querySelector('.about');
-const aboutButton = about.querySelector('.about__button');
+const about = document.querySelector('.about__wrapper');
+const aboutButton = about.querySelector('button');
 const aboutItemHidden = about.querySelectorAll('.about__item--hidden');
 const aboutItemSuppliers = about.querySelector('.about__item--suppliers');
 
 const onShowAboutText = () => {
   for (let i = 0; i < aboutItemHidden.length; i++) {
-    aboutItemHidden[i].classList.add('about__item--nojs');
+    aboutItemHidden[i].classList.remove('about__item--hidden');
   }
   aboutItemSuppliers.style.margin = '0 0 18px';
   aboutItemSuppliers.classList.add('about__item--suppliers-show');
@@ -16,7 +16,7 @@ const onShowAboutText = () => {
 
 const onCloseAboutText = () => {
   for (let i = 0; i < aboutItemHidden.length; i++) {
-    aboutItemHidden[i].classList.remove('about__item--nojs');
+    aboutItemHidden[i].classList.add('about__item--hidden');
   }
   aboutItemSuppliers.style.margin = '0';
   aboutItemSuppliers.classList.remove('about__item--suppliers-show');
@@ -26,11 +26,7 @@ const onCloseAboutText = () => {
 };
 
 const showAboutText = () => {
-  aboutButton.classList.remove('about__button--nojs');
-  aboutItemSuppliers.classList.remove('about__item--suppliers-nojs');
-  for (let i = 0; i < aboutItemHidden.length; i++) {
-    aboutItemHidden[i].classList.remove('about__item--nojs');
-  }
+  about.classList.remove('about__wrapper--nojs');
   aboutButton.addEventListener('click', onShowAboutText);
 };
 

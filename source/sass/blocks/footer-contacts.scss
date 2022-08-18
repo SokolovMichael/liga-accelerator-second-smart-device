@@ -15,9 +15,6 @@
 
   @media (max-width: $max-mobile-width) {
     width: 100%;
-    padding: 21px 25px 3px;
-    box-sizing: border-box;
-    position: relative;
     border-bottom: 1px solid $light-color-type-6;
   }
 }
@@ -32,7 +29,7 @@
   letter-spacing: 0.8px;
 
   @media (max-width: $max-mobile-width) {
-    margin-bottom: 13px;
+    display: none;
   }
 }
 
@@ -41,29 +38,49 @@
 
   @media (max-width: $max-mobile-width) {
     display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 66px;
-    height: 54px;
-    border: none;
+    width: 100%;
     background: transparent;
     cursor: pointer;
+    color: $light-color-type-5;
+    text-transform: uppercase;
+    text-align: left;
+    position: relative;
+    border: none;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 16px;
+    letter-spacing: 0.8px;
+    padding: 22px 25px 21px;
   }
+}
+
+.footer-contacts button:hover {
+  opacity: 0.6;
+}
+
+.footer-contacts button:active {
+  opacity: 1;
+}
+
+.footer-contacts--nojs button {
+  pointer-events: none;
 }
 
 .footer-contacts__button-icon {
   @media (max-width: $max-mobile-width) {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
+    top: 20px;
+    right: 26px;
   }
 }
 
-.footer-contacts--nojs button,
+.footer-contacts--nojs .footer-contacts__button-icon {
+  @media (max-width: $max-mobile-width) {
+    display: none;
+  }
+}
+
 .footer-contacts--closed .footer-contacts__button-icon--close,
 .footer-contacts--opened .footer-contacts__button-icon--open {
   @media (max-width: $max-mobile-width) {
@@ -82,9 +99,10 @@
 
   @media (max-width: $max-mobile-width) {
     font-size: 14px;
-    line-height: 19px;
+    line-height: 15px;
     letter-spacing: 0;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
+    padding: 0 25px;
   }
 }
 
@@ -101,10 +119,26 @@
   }
 }
 
+.footer-contacts__item {
+  margin-bottom: 15px;
+}
+
 .footer-contacts__item:first-child {
   @media (max-width: $max-mobile-width) {
-    margin-bottom: 13px;
+    margin-bottom: 25px;
   }
+}
+
+.footer-contacts__item:last-child {
+  margin-bottom: 0;
+}
+
+.footer-contacts__item:hover .footer-contacts__item-link {
+  opacity: 0.6;
+}
+
+.footer-contacts__item:active .footer-contacts__item-link {
+  opacity: 1;
 }
 
 .footer-contacts__item-link {
@@ -113,4 +147,8 @@
   color: $light-color-type-3;
   padding: 5px 0 4px;
   box-sizing: border-box;
+
+  @media (max-width: $max-mobile-width) {
+    padding: 0;
+  }
 }

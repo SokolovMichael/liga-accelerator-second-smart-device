@@ -51,5 +51,8 @@
     "duplicate-package-checker-webpack-plugin": "3.0.0",
     "gulp-libsquoosh": "^1.0.12",
     "gulp-svgo": "^2.2.1"
+  },
+  "dependencies": {
+    "focus-trap": "^7.0.0"
   }
 }

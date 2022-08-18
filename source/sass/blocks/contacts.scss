@@ -1,5 +1,6 @@
 .contacts {
   width: 480px;
+  margin-top: 5px;
 
   @media (max-width: $desktop-stretching-width) {
     width: calc(480 / 1280 * 100vw);
@@ -23,6 +24,14 @@
   font-style: normal;
 }
 
+.contacts__item:hover {
+  opacity: 0.6;
+}
+
+.contacts__item:active {
+  opacity: 1;
+}
+
 .contacts__details {
   color: $light-color-type-2;
   text-decoration: none;
@@ -32,8 +41,12 @@
   box-sizing: border-box;
 
   @media (max-width: $max-tablet-width) {
-    padding: 20px;
     margin-right: 20px;
+    padding: 15px 20px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding: 10px 20px;
   }
 }
 

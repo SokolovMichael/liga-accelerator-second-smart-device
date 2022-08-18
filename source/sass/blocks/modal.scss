@@ -7,6 +7,10 @@
   z-index: 1000;
   display: block;
   color: $light-color-type-5;
+
+  @media (max-height: 610px) {
+    overflow: auto;
+  }
 }
 
 .modal--closed {
@@ -25,6 +29,11 @@
   background: $background-color;
   border-radius: 3px;
   min-height: 610px;
+
+  @media (max-height: 610px) {
+    top: 0;
+    transform: translate(-50%, 0);
+  }
 }
 
 .modal__window h2 {
@@ -48,6 +57,14 @@
   top: 0;
   right: 0;
   cursor: pointer;
+}
+
+.modal__window button[type="button"]:hover {
+  opacity: 0.6;
+}
+
+.modal__window button[type="button"]:active {
+  opacity: 1;
 }
 
 .modal__button-icon {

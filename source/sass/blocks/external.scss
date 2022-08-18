@@ -4,12 +4,28 @@
   margin: 0 35px 0 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   width: 140px;
 
   @media (max-width: $max-tablet-width) {
     margin-right: 0;
   }
+}
+
+.external__item {
+  margin-right: 25px;
+}
+
+.external__item:nth-child(3n),
+.external__item:last-child {
+  margin-right: 0;
+}
+
+.external__item:hover {
+  opacity: 0.6;
+}
+
+.external__item:active {
+  opacity: 1;
 }
 
 .external__link {

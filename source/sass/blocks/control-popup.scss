@@ -4,6 +4,14 @@
   padding-left: 35px;
 }
 
+.control-popup:hover {
+  opacity: 0.6;
+}
+
+.control-popup:active {
+  opacity: 1;
+}
+
 .control-popup__mark-icon {
   display: none;
   position: absolute;
@@ -34,4 +42,8 @@
 
 .control-popup input[type="checkbox"]:checked + .control-popup__mark-icon {
   display: block;
+}
+
+.control-popup input[type="checkbox"]:focus-visible ~ .control-popup__mark {
+  border: 1px solid $dark-color-type-7;
 }

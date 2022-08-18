@@ -18,6 +18,25 @@
   margin-bottom: 0;
 }
 
+.form-popup__item--tel {
+  position: relative;
+}
+
+.form-popup__item--tel .form-popup__label span:last-child {
+  display: none;
+}
+
+.form-popup__item--alert .form-popup__label span:last-child {
+  display: block;
+  color: $alert-color;
+  text-transform: lowercase;
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  font-size: 14px;
+  line-height: 15px;
+}
+
 .form-popup__item input,
 .form-popup__item textarea {
   width: 100%;
@@ -58,4 +77,16 @@
   width: 100%;
   letter-spacing: 0.7px;
   margin-bottom: 16px;
+}
+
+.form-popup__fieldset--not-active button {
+  pointer-events: none;
+}
+
+.form-popup__fieldset button:hover {
+  opacity: 0.6;
+}
+
+.form-popup__fieldset button:active {
+  opacity: 1;
 }

@@ -16,6 +16,14 @@
   }
 }
 
+.control:hover {
+  opacity: 0.6;
+}
+
+.control:active {
+  opacity: 1;
+}
+
 .control__mark-icon {
   display: none;
   position: absolute;
@@ -59,4 +67,8 @@
 
 .control input[type="checkbox"]:checked + .control__mark-icon {
   display: block;
+}
+
+.control input[type="checkbox"]:focus-visible ~ .control__mark {
+  border: 1px solid $dark-color-type-7;
 }

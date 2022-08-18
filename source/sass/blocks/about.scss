@@ -10,18 +10,15 @@
   }
 
   @media (max-width: $max-tablet-width) {
-    width: 674px;
+    width: calc(674 / 770 * 100vw);
     gap: 27px;
     margin-bottom: 80px;
   }
 
-  @media (max-width: $max-tablet-width-control-point) {
-    width: calc(674 / 770 * 100vw);
-  }
-
   @media (max-width: $max-mobile-width) {
     display: block;
-    width: 270px;
+    min-width: 270px;
+    width: calc(270 / 320 * 100vw);
   }
 }
 
@@ -135,6 +132,14 @@
     width: 160px;
     padding: 8px;
   }
+}
+
+.about__wrapper button:hover {
+  opacity: 0.6;
+}
+
+.about__wrapper button:active {
+  opacity: 1;
 }
 
 .about__wrapper--nojs button {

@@ -1,3 +1,11 @@
+.card:hover .card__link {
+  opacity: 0.6;
+}
+
+.card:active .card__link {
+  opacity: 1;
+}
+
 .card__link {
   display: block;
   color: $light-color-type-5;

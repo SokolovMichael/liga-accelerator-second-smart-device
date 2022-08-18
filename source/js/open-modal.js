@@ -1,10 +1,21 @@
 import {isEscapeKey} from './utils/is-escape-key.js';
+import {createFocusTrap} from 'focus-trap';
 
+const page = document.querySelector('.page__wrapper');
 const nav = document.querySelector('.nav__wrapper');
 const openModalWindowButton = nav.querySelector('button');
 const modal = document.querySelector('.modal');
 const closeModalWindowButton = modal.querySelector('button[type="button"]');
 const formPopupInput = modal.querySelector('input[type="text"]');
+
+const focusTrap = createFocusTrap('#modal', {
+  onActivate: () => {
+    modal.classList.add('trap', 'is', 'visible');
+  },
+  onDeactivate: () => {
+    modal.classList.remove('trap', 'is', 'visible');
+  },
+});
 
 const onModalWindowOpen = () => {
   modal.classList.remove('modal--closed');
@@ -13,6 +24,8 @@ const onModalWindowOpen = () => {
   document.addEventListener('keydown', onModalWindowEscKeydown);
   document.addEventListener('click', onModalWindowOutsideClickClose);
   formPopupInput.focus();
+  page.setAttribute('inert', 'true');
+  focusTrap.activate();
 };
 
 const onModalWindowClose = () => {
@@ -21,6 +34,8 @@ const onModalWindowClose = () => {
   openModalWindowButton.addEventListener('click', onModalWindowOpen);
   document.removeEventListener('keydown', onModalWindowEscKeydown);
   document.removeEventListener('click', onModalWindowOutsideClickClose);
+  page.removeAttribute('inert', 'true');
+  focusTrap.deactivate();
 };
 
 const onModalWindowEscKeydown = (evt) => {

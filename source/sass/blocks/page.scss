@@ -35,10 +35,16 @@
   width: 100%;
   z-index: 2;
   background: linear-gradient($base-dark-color 84.9%, $dark-color-type-2 100%);
+  padding: 30px 0 35px;
 
   @media (max-width: $max-tablet-width) {
     position: absolute;
     top: 0;
+    padding: 20px 0;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding: 15px 0;
   }
 }
 

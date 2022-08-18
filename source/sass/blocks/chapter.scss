@@ -13,9 +13,6 @@
 
   @media (max-width: $max-mobile-width) {
     width: 100%;
-    padding: 21px 25px 3px;
-    box-sizing: border-box;
-    position: relative;
     border-bottom: 1px solid $light-color-type-6;
   }
 }
@@ -28,6 +25,10 @@
   line-height: 16px;
   text-transform: uppercase;
   letter-spacing: 0.8px;
+
+  @media (max-width: $max-mobile-width) {
+    display: none;
+  }
 }
 
 .chapter button {
@@ -35,29 +36,49 @@
 
   @media (max-width: $max-mobile-width) {
     display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 66px;
-    height: 54px;
-    border: none;
+    width: 100%;
     background: transparent;
     cursor: pointer;
+    color: $light-color-type-5;
+    text-transform: uppercase;
+    text-align: left;
+    position: relative;
+    border: none;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 16px;
+    letter-spacing: 0.8px;
+    padding: 22px 25px 21px;
   }
+}
+
+.chapter button:hover {
+  opacity: 0.6;
+}
+
+.chapter button:active {
+  opacity: 1;
+}
+
+.chapter--nojs button {
+  pointer-events: none;
 }
 
 .chapter__button-icon {
   @media (max-width: $max-mobile-width) {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
+    top: 20px;
+    right: 26px;
   }
 }
 
-.chapter--nojs button,
+.chapter--nojs .chapter__button-icon {
+  @media (max-width: $max-mobile-width) {
+    display: none;
+  }
+}
+
 .chapter--closed .chapter__button-icon--close,
 .chapter--opened .chapter__button-icon--open {
   @media (max-width: $max-mobile-width) {
@@ -69,20 +90,21 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   letter-spacing: 0.2px;
-  height: 145px;
 
   @media (max-width: $max-tablet-width) {
-    height: auto;
+    display: flex;
+    flex-direction: column;
   }
 
   @media (max-width: $max-mobile-width) {
-    margin-bottom: 12px;
     font-size: 14px;
-    line-height: 19px;
+    line-height: 15px;
+    letter-spacing: 0;
+    margin-bottom: 20px;
+    padding: 0 25px;
   }
 }
 
@@ -104,7 +126,61 @@
   display: block;
 
   @media (max-width: $max-tablet-width) {
-    margin-right: 0;
+    margin: 0 0 15px;
+  }
+}
+
+.chapter__item:last-child {
+  margin-bottom: 0;
+}
+
+.chapter__item:hover .chapter__item-link {
+  opacity: 0.6;
+}
+
+.chapter__item:active .chapter__item-link {
+  opacity: 1;
+}
+
+.chapter__item--about {
+  @media (max-width: $max-tablet-width) {
+    order: 1;
+  }
+}
+
+.chapter__item--accessories {
+  @media (max-width: $max-tablet-width) {
+    order: 5;
+  }
+}
+
+.chapter__item--products {
+  @media (max-width: $max-tablet-width) {
+    order: 2;
+  }
+}
+
+.chapter__item--delivery {
+  @media (max-width: $max-tablet-width) {
+    order: 6;
+  }
+}
+
+.chapter__item--pcb-manufacturing {
+  @media (max-width: $max-tablet-width) {
+    order: 3;
+  }
+}
+
+.chapter__item--contacts {
+  @media (max-width: $max-tablet-width) {
+    order: 7;
+  }
+}
+
+.chapter__item--pcb-assembly {
+  @media (max-width: $max-tablet-width) {
+    order: 4;
   }
 }
 

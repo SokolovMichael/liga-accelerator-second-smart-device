@@ -20,15 +20,11 @@
   }
 
   @media (max-width: $max-tablet-width) {
-    width: 670px;
-  }
-
-  @media (max-width: $max-tablet-width-control-point) {
     width: calc(670 / 770 * 100vw);
   }
 
   @media (max-width: $max-mobile-width) {
-    width: 270px;
+    width: calc(270 / 320 * 100vw);
   }
 }
 

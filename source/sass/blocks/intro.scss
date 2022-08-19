@@ -80,6 +80,7 @@
 
   @media (max-width: $max-mobile-width) {
     width: 270px;
+    width: calc(270 / 320 * 100vw);
     margin-top: 78px;
   }
 }
@@ -156,7 +157,7 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    width: auto;
+    width: 270px;
     margin-left: 0;
     font-size: 14px;
     list-style: 17px;

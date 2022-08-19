@@ -12,7 +12,6 @@
     padding-left: 30px;
     display: block;
     margin: 0 auto;
-    width: 270px;
   }
 }
 
@@ -34,11 +33,10 @@
   content: "";
   z-index: 2;
   fill: transparent;
-
-  @media (max-width: $max-mobile-width) {
-    top: 11px;
-    left: 7px;
-  }
+  top: 0;
+  bottom: 0;
+  left: 2px;
+  margin: auto;
 }
 
 .control__mark {
@@ -50,10 +48,12 @@
   border-radius: 2px;
   border: 1px solid $light-color-type-5;
   content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 
   @media (max-width: $max-mobile-width) {
-    top: 7px;
-    left: 5px;
     width: 12px;
     height: 12px;
   }

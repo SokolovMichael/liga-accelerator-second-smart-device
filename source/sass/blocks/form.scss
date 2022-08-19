@@ -30,7 +30,6 @@
   @media (max-width: $max-mobile-width) {
     font-size: 30px;
     line-height: 42px;
-    width: 270px;
     margin: 0 auto 7px;
   }
 }
@@ -45,7 +44,6 @@
   @media (max-width: $max-mobile-width) {
     font-size: 14px;
     line-height: 19px;
-    width: 270px;
     margin: 0 auto 34px;
   }
 }
@@ -155,10 +153,6 @@
     margin-bottom: 25px;
     display: block;
   }
-}
-
-.form__wrapper--not-active button {
-  pointer-events: none;
 }
 
 .form__wrapper button:hover {

@@ -37,10 +37,6 @@
 
   @media (max-width: $max-tablet-width) {
     display: block;
-    width: 670px;
-  }
-
-  @media (max-width: $max-tablet-width-control-point) {
     width: calc(670 / 770 * 100vw);
   }
 

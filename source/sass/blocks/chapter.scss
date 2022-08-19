@@ -126,12 +126,18 @@
   display: block;
 
   @media (max-width: $max-tablet-width) {
-    margin: 0 0 15px;
+    margin-right: 0;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-bottom: 15px;
   }
 }
 
 .chapter__item:last-child {
-  margin-bottom: 0;
+  @media (max-width: $max-mobile-width) {
+    margin-bottom: 0;
+  }
 }
 
 .chapter__item:hover .chapter__item-link {
